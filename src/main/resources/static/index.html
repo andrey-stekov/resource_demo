@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="HelloApp">
+<head>
+    <meta charset="utf-8">
+    <title>Hello App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="webjars/bootstrap/3.1.0/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="webjars/bootstrap/3.1.0/css/bootstrap-theme.css" rel="stylesheet" />
+
+    <style type="text/css">
+        .input-group-xs>.form-control,
+        .input-group-xs>.input-group-addon,
+        .input-group-xs>.input-group-btn>.btn {
+            height: 22px;
+            padding: 1px 5px;
+            font-size: 12px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <base href="http://localhost:8080/" />
+            <nav-bar-dirictive></nav-bar-dirictive>
+            <div ng-view ></div>
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+
+    <script src="webjars/jquery/1.12.0/jquery.js"></script>
+    <script src="webjars/bootstrap/3.1.0/js/bootstrap.js"></script>
+
+    <script src="webjars/angularjs/1.5.0/angular.js"></script>
+    <script src="webjars/angularjs/1.5.0/angular-route.js"></script>
+    <script src="webjars/angularjs/1.5.0/angular-resource.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

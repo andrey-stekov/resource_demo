@@ -1,0 +1,21 @@
+<th class="col-md-1" scope="row">
+    <button ng-hide="c.entity.isDone" ng-click="c.checkHandler()" type="button" class="btn btn-default btn-xs">
+        <span class="glyphicon glyphicon-unchecked" aria-hidden="true"></span>
+    </button>
+    <button ng-show="c.entity.isDone" ng-click="c.checkHandler()" type="button" class="btn btn-default btn-xs">
+        <span class="glyphicon glyphicon-check" aria-hidden="true"></span>
+    </button>
+</th>
+<td class="col-md-11">
+    <a ng-hide="c.isEditing()" ng-click="c.editHandler()" href="#">{{c.entity.title}}</a>
+    <form ng-show="c.isEditing()" ngSubmit="c.editHandler()" class="form-inline">
+        <div class="form-group">
+            <div class="input-group-xs">
+                <input ng-model="c.entity.title" type="text" class="form-control" />
+            </div>
+        </div>
+        <button ng-click="c.editHandler()" type="submit" class="btn btn-primary btn-xs">
+            <span class="glyphicon glyphicon-pencil"></span>
+        </button>
+    </form>
+</td>

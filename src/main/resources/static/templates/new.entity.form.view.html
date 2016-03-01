@@ -1,0 +1,14 @@
+<form ngSubmit="c.addEntityHandler()" class="form-inline" name="newEntityForm" novalidate>
+    <div class="form-group"
+         ng-class="{'has-error' : (newEntityForm.title.$invalid && !newEntityForm.title.$pristine)}">
+        <div class="input-group-xs">
+            <input ng-model="c.title" name="title" type="text" class="form-control" required="" />
+        </div>
+    </div>
+    <button ng-disabled="newEntityForm.$invalid"
+            ng-click="c.addEntityHandler()"
+            type="submit"
+            class="btn btn-primary btn-xs">
+        <span class="glyphicon glyphicon-plus"></span>
+    </button>
+</form>
